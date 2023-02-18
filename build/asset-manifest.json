@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.3246ccb0.css",
-    "main.js": "/static/js/main.b408f28c.js",
+    "main.js": "/static/js/main.0b6d70fb.js",
     "static/media/hansjorg-keller-puMOiZaaxWI-unsplash.jpg": "/static/media/hansjorg-keller-puMOiZaaxWI-unsplash.65b9bc38dd712da3a80f.jpg",
-    "static/media/honeypotlogo.png": "/static/media/honeypotlogo.21c5a6a0ff930a6f1b1f.png",
+    "static/media/thebee logo.png": "/static/media/thebee logo.7e845e5ac31808754819.png",
     "index.html": "/index.html",
     "main.3246ccb0.css.map": "/static/css/main.3246ccb0.css.map",
-    "main.b408f28c.js.map": "/static/js/main.b408f28c.js.map"
+    "main.0b6d70fb.js.map": "/static/js/main.0b6d70fb.js.map"
   },
   "entrypoints": [
     "static/css/main.3246ccb0.css",
-    "static/js/main.b408f28c.js"
+    "static/js/main.0b6d70fb.js"
   ]
 }
