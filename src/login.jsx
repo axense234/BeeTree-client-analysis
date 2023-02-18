@@ -17,19 +17,16 @@ function Login() {
   // const { isFetching, error } = useSelector((state) => state.user);
   // const dispatch = useDispatch();
   const navigate = useNavigate();
+  
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
-      if (email === "Waphilo7@gmail.com" && password === "admin") {
-        window.open("/admin", "_blank");
-      } else {
-        setError("Invalid email or password. Please try again.");
-      }
-    } catch (error) {
-      setError(error.message);
-      console.log(error);
-    }
+if (email === "waphilo7@gmail.com" && password === "admin") {
+  localStorage.setItem("userEmail", email);
+  window.open("/admin", "_blank");
+} else {
+  setError("Invalid email or password. Please try again.");
+}
   };
 
   return (
