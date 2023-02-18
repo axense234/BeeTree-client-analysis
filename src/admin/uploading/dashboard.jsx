@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import "./dashboard.css";
 
 import axios from "axios";
+import { BeehiveRoute } from "../../api/api";
 
 function Dashboard() {
   const [imageloadupload, setImageLoadUpload] = useState(false);
@@ -60,7 +61,7 @@ function Dashboard() {
         setLoading(true);
 
         const { data } = await axios.post(
-          "http://localhost:3003/api/hives",
+          BeehiveRoute,
           hive
         );
 
