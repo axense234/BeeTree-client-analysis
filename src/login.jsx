@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      if (email === "waphilo7@gmail.com" && password === "admin") {
+      if (email === "Waphilo7@gmail.com" && password === "admin") {
         localStorage.setItem("userEmail", email);
         window.open("/admin", "_blank");
       } else {
