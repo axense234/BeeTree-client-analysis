@@ -1,0 +1,148 @@
+.products-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px;
+  width: 100%;
+  height: auto;
+  margin-top: 136px;
+
+  cursor: pointer;
+}
+
+.allproducts-container {
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+
+  margin-top: 135px;
+
+  cursor: pointer;
+}
+
+.headers {
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.sale {
+  text-align: left;
+  margin-bottom: 20px;
+  color: black;
+  float: left;
+}
+
+button {
+  float: right;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1px;
+  margin: auto;
+}
+
+.productssitems {
+  width: 200px;
+  margin: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.productssitems :hover {
+  box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productssfooter {
+  padding: 10px;
+  font-size: 14px;
+  color: rgb(45, 44, 44);
+}
+Link {
+  color: none;
+}
+
+.productssname {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.size {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.productssprice {
+  color: green;
+}
+.viewdeal {
+  color: rgb(128, 68, 0);
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 2px solid rgb(80, 82, 80);
+}
+.viewdeal:hover {
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+@media (min-width: 360px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .productssitems {
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .productssitems {
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .productssitems {
+    width: auto;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination span {
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pagination .active {
+  background-color: #4caf50;
+  color: #fff;
+}

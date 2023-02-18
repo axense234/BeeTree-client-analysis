@@ -1,0 +1,127 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 140px;
+}
+.i-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-bottom: auto;
+  margin-left: 2px;
+}
+.col-left {
+  width: 50%;
+  flex: 1;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.col-right {
+  width: 50px;
+  flex: 1;
+}
+.property-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 50px;
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  color: black;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.flex {
+  display: flex;
+  align-items: flex-start;
+}
+h1.facility-name {
+  font-size: 18px;
+  font-weight: 500;
+
+  width: 120px;
+}
+.facility-value {
+  font-size: 14px;
+}
+
+.multi-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flex {
+  display: flex;
+  align-items: flex-start;
+}
+h1.facility-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 10px;
+  width: 120px;
+}
+.facility-value {
+  font-size: 18px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  display: block;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #0070f3;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+@media (min-width: 360px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

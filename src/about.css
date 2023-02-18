@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
+
+*{
+
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+.main{
+
+    height:50vh;
+    width:100%;
+    background:url('./hansjorg-keller-puMOiZaaxWI-unsplash.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    opacity:0.9;
+    background-repeat: no-repeat;
+     background-color: transparent; 
+
+ }
+
+.main .title{
+
+    text-align: center;
+    font-size: 26px;
+    /* margin-top: 60px; */
+
+
+} 
+
+.title #name{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* .typewriter {
+    /* overflow: hidden; Ensures the text is not revealed until the animation */
+  /* } */ 
+  
+  /* .typewriter .text-1 {
+    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+  }
+  
+  .typewriter .text-2 {
+    animation: erase 2s steps(30, end) 3s, typing 3s steps(30, end) 5s, blink-caret .5s step-end infinite 8s;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes erase {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+    */

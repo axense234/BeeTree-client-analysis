@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
+
+
+*{
+
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+   
+}
+
+/* form{
+    background: url('./bianca-ackermann-mTNVvQvmoKs-unsplash.jpg');
+    height: 100vh;
+    width:100%;
+} */
+
+.reg{
+
+   
+    height: 100vh;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+
+.signup-form {
+    background: #ffff;
+    margin: 0 auto 0;
+    border-radius: 8px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.form-header {
+    background:#ffc72b;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-body {
+    padding: 35px 20px 5px;
+}
+
+
+.form-footer {
+    padding: 10px 20px 35px;
+}
+
+.form-group a{
+    color:#222f3e;;
+}
+
+input,
+  button {
+    width: 100%;
+    border: 2px solid #e7e7e7;;
+    outline: none;
+    font-size: 14px;
+  border-radius: 0!important;
+  background: #e7e7e7;
+}
+input::placeholder{
+      font-size: 13px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #222f3e;
+    text-align: left;
+}
+
+
+.form-group {
+   
+    margin-bottom: 15px;
+}
+
+
+button {
+    color: #fff;
+    font-weight: 400;
+    transition: 1s ease-in-out;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background: #ffc72b;
+}
+button:disabled{
+    cursor: not-allowed; 
+    background-color:rgb(141, 136, 136) ;
+}
+
+input {
+    padding: 10px 15px;
+}
+
+button:hover{
+    background: #324255;
+}
+
+.form-footer p{
+    font-size: 15px;
+    color: #7a7a7a;
+    margin-top: 10px;text-align: center;
+}
+
+.form-footer p a{
+    color: #222f3e;
+}
+.error{
+    color: red;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+           
+.success{
+    color: green;
+    font-size: 14px;
+    margin-left: 20px;
+}
