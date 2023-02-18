@@ -5,6 +5,7 @@ import { BeehiveRoute } from "../../api/api";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../navbar";
 import Footer from "../footer";
+import { BeehiveRoute } from "../../api/api";
 import Swal from "sweetalert";
 
 const Single = () => {
@@ -16,7 +17,7 @@ const Single = () => {
   const getSingleProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:3003/api/hives/${id}`);
+           const { data } = await axios.get(`${BeehiveRoute}/${id}`);
 
       console.log(data);
 
