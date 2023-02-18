@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 
-import { useDispatch, useSelector } from "react-redux";
 
-import { login } from "./redux/apiCalls";
 import Navbar from "./components/navbar";
-import { loginFailure, loginStart, loginSuccess } from "./redux/userSlice";
-import axios from "axios";
-import { loginRoute } from "./api/api";
+
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,16 +14,20 @@ function Login() {
   // const { isFetching, error } = useSelector((state) => state.user);
   // const dispatch = useDispatch();
   const navigate = useNavigate();
-  
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
-if (email === "waphilo7@gmail.com" && password === "admin") {
-  localStorage.setItem("userEmail", email);
-  window.open("/admin", "_blank");
-} else {
-  setError("Invalid email or password. Please try again.");
-}
+      if (email === "waphilo7@gmail.com" && password === "admin") {
+        localStorage.setItem("userEmail", email);
+        window.open("/admin", "_blank");
+      } else {
+        setError("Invalid email or password. Please try again.");
+      }
+    } catch (error) {
+      setError(error.message);
+      console.log(error);
+    }
   };
 
   return (
