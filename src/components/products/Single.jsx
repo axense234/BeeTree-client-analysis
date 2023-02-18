@@ -5,7 +5,7 @@ import { BeehiveRoute } from "../../api/api";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../navbar";
 import Footer from "../footer";
-import { BeehiveRoute } from "../../api/api";
+// import { BeehiveRoute } from "../../api/api";
 import Swal from "sweetalert";
 
 const Single = () => {
