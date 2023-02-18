@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
-import Logo from "./honeypotlogo.png";
+import Logo from "./thebee logo.png";
 import { Link as RouterLink } from "react-router-dom";
 import "./navbar.css";
 
