@@ -50,18 +50,19 @@
 }
 
 .whatsapp {
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 500;
   /* height: 5rem; */
   /* width: 6rem; */
   border-radius: 6rem;
+  color:black;
   cursor: pointer;
   transition: background-color 1s ease-in-out 1.5ms;
   float: none!important;
   width: max-content!important;
 }
 .whatsapp svg{
-  color:#25d366;;
+  color:black;
 
 }
 
