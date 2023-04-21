@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./products.css";
-import axios from "axios";
-import { BeehiveRoute } from "../../api/api";
+import "../../css/Products.css";
 import { Link } from "react-router-dom";
-import Navbar from "../navbar";
-import Footer from "../footer";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import getProducts from "../../hooks/getProducts";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -12,24 +11,8 @@ const AllProducts = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(18);
 
-  const getAllProducts = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get(BeehiveRoute);
-
-      console.log(data.getallhives);
-
-      setProducts(data.getallhives);
-
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
-    getAllProducts();
+    getProducts(setLoading, setProducts);
   }, []);
 
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -62,7 +45,8 @@ const AllProducts = () => {
                 </div>
                 <Link
                   to={`/products/${item._id}`}
-                  style={{ textDecoration: "none" }}>
+                  style={{ textDecoration: "none" }}
+                >
                   <div className="productssfooter">
                     <h2 className="productssname">{item.name}</h2>
                     <h4 className="productssprice">Ksh: {item.price}</h4>
@@ -78,14 +62,15 @@ const AllProducts = () => {
             <span
               key={number}
               className={currentPage === number ? "active" : ""}
-              onClick={() => paginate(number)} >
+              onClick={() => paginate(number)}
+            >
               {number}
             </span>
           ))}
-</div>
-</div>
-<Footer/>
-</>
+        </div>
+      </div>
+      <Footer />
+    </>
 )
 }
 export default AllProducts;

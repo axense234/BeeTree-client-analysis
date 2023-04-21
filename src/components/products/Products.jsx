@@ -1,31 +1,14 @@
 import React, { useEffect, useState } from "react";
-import "./products.css";
-import axios from "axios";
-import { BeehiveRoute } from "../../api/api";
+import "../../css/Products.css";
 import { Link } from "react-router-dom";
+import getProducts from "../../hooks/getProducts";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getProducts = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get(BeehiveRoute);
-
-      console.log(data.getallhives);
-
-      setProducts(data.getallhives.slice(0, 18));
-
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
-    getProducts();
+    getProducts(setLoading, setProducts, 18);
   }, []);
 
   return (
@@ -33,11 +16,9 @@ const Products = () => {
       <div className="headers">
         <h2 className="sale">BEEHIVES</h2>
         <Link to="/allproducts" style={{ textDecoration: "none" }}>
-          {" "}
-          <button className="">See more</button>
+          <button type="button">See more</button>
         </Link>
       </div>
-
       <div className="products">
         {loading ? (
           <p>loading ...</p>
@@ -49,7 +30,8 @@ const Products = () => {
               </div>
               <Link
                 to={`/products/${item._id}`}
-                style={{ textDecoration: "none" }}>
+                style={{ textDecoration: "none" }}
+              >
                 <div className="productssfooter">
                   <h2 className="productssname">{item.name}</h2>
                   <h4 className="productssprice">Ksh: {item.price}</h4>

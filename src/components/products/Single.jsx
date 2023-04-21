@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./single.css";
+import "../../css/Single.css";
 import axios from "axios";
-import { BeehiveRoute } from "../../api/api";
-import { Link, useParams } from "react-router-dom";
-import Navbar from "../navbar";
-import Footer from "../footer";
-// import { BeehiveRoute } from "../../api/api";
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert";
+import { BeehiveRoute } from "../../api/api";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Single = () => {
   const [products, setProducts] = useState([]);
@@ -34,7 +33,7 @@ const Single = () => {
     getSingleProducts();
   }, []);
 
-  const handlesubmit = async () => {
+  const handleSubmit = async () => {
     const message = `Greetings! I hope this message finds you well. I am writing to express my interest in purchasing/buring your bee beeproduct. I am particularly intrigued by the *${products.name}* hive, with its attractive price of *${products.price}*. I would love to learn more about its specifications, particularly the size, *${products.size}*. If you could provide me with further details, I would greatly appreciate it. Thank you for your time and consideration.`;
 
     try {
@@ -54,7 +53,6 @@ const Single = () => {
   return (
     <>
       <Navbar />
-
       <main>
         {loading ? (
           <p>loading ...</p>
@@ -87,11 +85,12 @@ const Single = () => {
                   </li>
 
                   <div className="feature contact">
-                    <br></br>
+                    <br />
                     <button
                       type="button"
                       className="btn"
-                      onClick={handlesubmit}>
+                      onClick={handleSubmit}
+                    >
                       ENQUIRE
                     </button>
                   </div>

@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
 
 *{
@@ -12,7 +13,7 @@
 
     height:50vh;
     width:100%;
-    background:url('./hansjorg-keller-puMOiZaaxWI-unsplash.jpg');
+    background:url('../imgs/hansjorg-keller-puMOiZaaxWI-unsplash.jpg');
     background-size: cover;
     border-radius: 10px;
     opacity:0.9;

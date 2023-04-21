@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-import Navbar from "../components/navbar";
-import "./dashboard.css";
-
 import axios from "axios";
+import Navbar from "../components/AdminNav";
+import "../../css/Dashboard.css";
 import { BeehiveRoute } from "../../api/api";
 
 function Dashboard() {
@@ -143,7 +142,8 @@ function Dashboard() {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                disabled={imageloadupload || loading}>
+                disabled={imageloadupload || loading}
+              >
                 {loading
                   ? "Loading..."
                   : imageloadupload

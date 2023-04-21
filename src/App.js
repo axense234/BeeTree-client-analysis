@@ -1,14 +1,12 @@
 import React from "react";
 
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import Dashboard from "./admin/uploading/dashboard.jsx";
-import AllProducts from "./components/products/Allproducts.jsx";
+import Dashboard from "./admin/uploading/Dashboard.jsx";
+import AllProducts from "./components/products/AllProducts.jsx";
 import Single from "./components/products/Single.jsx";
-
-import Home from "./home.jsx";
-import Login from "./login.jsx";
-
-import Register from "./register.jsx";
+import Home from "./Home.jsx";
+import Login from "./Login.jsx";
+import Register from "./Register.jsx";
 
 function ProtectedRoute({ isAuth, element }) {
   const Navigate = useNavigate();
@@ -23,10 +21,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-
           <Route
             path="/admin"
             element={
+              // eslint-disable-next-line react/jsx-wrap-multilines
               <ProtectedRoute
                 isAuth={
                   localStorage.getItem("userEmail") === "Waphilo7@gmail.com"
@@ -35,7 +33,6 @@ function App() {
               />
             }
           />
-
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/products/:id" element={<Single />} />
         </Routes>

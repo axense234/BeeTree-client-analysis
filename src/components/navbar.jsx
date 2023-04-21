@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
-import Logo from "./thebee logo.png";
 import { Link as RouterLink } from "react-router-dom";
-import "./navbar.css";
+import Logo from "../imgs/thebee logo.png";
+import "../css/Navbar.css";
 
 function Navbar() {
   const navRef = useRef();
@@ -12,7 +12,7 @@ function Navbar() {
     navRef.current.classList.toggle("responsive_nav");
   };
 
-  //we will toggle the responsive_nav once class is invoked.
+  // we will toggle the responsive_nav once class is invoked.
 
   const [navbarcolor, setNavbarcolor] = useState("#ffc72b");
 
@@ -36,15 +36,15 @@ function Navbar() {
     <>
       <header style={{ backgroundColor: navbarcolor }}>
         <div className="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
+          <div className="flip-box-inner">
+            <div className="flip-box-front">
               <RouterLink to="/">
                 {" "}
                 <img src={Logo} className="logo" alt="HoneyPot" />
               </RouterLink>
             </div>
 
-            <div class="flip-box-back">
+            <div className="flip-box-back">
               <RouterLink to="/" style={{ textDecoration: "none" }}>
                 <p>Delivering the best quality hives.</p>
               </RouterLink>
@@ -56,27 +56,30 @@ function Navbar() {
           <RouterLink to="/" style={{ textDecoration: "none" }}>
             <Link
               to="home"
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               offset={-100}
-              duration={500}>
+              duration={500}
+            >
               Home
             </Link>
           </RouterLink>
           <Link
             to="about"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={-130}
-            duration={500}>
+            duration={500}
+          >
             Work Experience
           </Link>
           <Link
             to="contact"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={50}
-            duration={500}>
+            duration={500}
+          >
             Contact
           </Link>
           <RouterLink to="/login" style={{ textDecoration: "none" }}>
@@ -88,12 +91,12 @@ function Navbar() {
             <FaTimes />
           </button> */}
         </nav>
- 
+
         {/* //smaller screens will open the navigation bar with this */}
 
         {/* will be the default one on smaller screens */}
-        <button className="nav-btn" onClick={shownavbar}>
-        
+        <button type="button" className="nav-btn" onClick={shownavbar}>
+
           <FaBars />
         </button>
       </header>

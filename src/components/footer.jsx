@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPhone, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import ReactWhatsapp from "react-whatsapp";
-import "./footer.css";
+import "../css/Footer.css";
 
 function Footer() {
   return (

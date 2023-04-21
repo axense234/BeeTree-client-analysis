@@ -1,20 +1,13 @@
 import React from 'react'
-import './contact.css'
+import './css/Contact.css'
 
 function Contact() {
   return (
 
     <>
-    
-    
-    <form>
 
+      <form />
 
-
-        
-    </form>
-    
-    
     </>
 
   )

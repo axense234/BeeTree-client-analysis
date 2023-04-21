@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./register.css";
-
-
-import Navbar from "./components/navbar";
-
-
+// import { useNavigate } from "react-router-dom";
+import "./css/Login.css";
+import Navbar from "./components/Navbar";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,7 +9,6 @@ function Login() {
   const [error, setError] = useState("");
   // const { isFetching, error } = useSelector((state) => state.user);
   // const dispatch = useDispatch();
-  const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -24,6 +19,7 @@ function Login() {
       } else {
         setError("Invalid email or password. Please try again.");
       }
+    // eslint-disable-next-line no-shadow
     } catch (error) {
       setError(error.message);
       console.log(error);
@@ -33,11 +29,9 @@ function Login() {
   return (
     <>
       <Navbar />
-
       <div className="reg">
         <form className="signup-form">
           <div className="form-header">HoneyPot | Update Using redux </div>
-
           <div className="form-body">
             <div className="form-group">
               <label htmlFor="emailOrPhone">Email</label>

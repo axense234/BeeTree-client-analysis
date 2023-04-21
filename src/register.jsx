@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./register.css";
-
+import "./css/Register.css";
 import { useDispatch, useSelector } from "react-redux";
-
 import { register } from "./redux/apiCalls";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 
 function Register() {
   const [name, setName] = useState("");
@@ -21,6 +19,7 @@ function Register() {
       register({ name, email, password }, dispatch);
 
       navigate("/");
+    // eslint-disable-next-line no-shadow
     } catch (error) {
       console.log(error);
     }
@@ -73,7 +72,8 @@ function Register() {
             <button
               type="submit"
               disabled={isFetching}
-              onClick={handleRegister}>
+              onClick={handleRegister}
+            >
               Register
             </button>
             {error && <span className="error">something went wrong</span>}

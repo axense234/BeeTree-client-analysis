@@ -3,37 +3,41 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
   name: "user",
   initialState: {
-    currentUser:null,
-    isFetching:false,
-    error:false
-  
+    currentUser: null,
+    isFetching: false,
+    error: false,
   },
   reducers: {
-   loginStart: (state) => {
+    loginStart: (state) => {
       state.isFetching = true;
     },
-   loginSuccess: (state, action) => {
+    loginSuccess: (state, action) => {
       state.isFetching = false;
       state.currentUser = action.payload;
     },
-   loginFailure: (state) => {
+    loginFailure: (state) => {
       state.error = true;
       state.isFetching = null;
     },
-   registerStart: (state) => {
+    registerStart: (state) => {
       state.isFetching = true;
     },
-  registerSuccess: (state, action) => {
+    registerSuccess: (state, action) => {
       state.isFetching = false;
       state.currentUser = action.payload;
     },
-  registerFailure: (state) => {
+    registerFailure: (state) => {
       state.error = true;
       state.isFetching = null;
     },
-   
   },
 });
-export const { loginStart, loginSuccess, loginFailure,registerStart, registerSuccess, registerFailure } =
-  userSlice.actions;
+export const {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+  registerStart,
+  registerSuccess,
+  registerFailure,
+} = userSlice.actions;
 export default userSlice.reducer;
